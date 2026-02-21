@@ -4730,6 +4730,709 @@
           ]
         }
       ]
+    },
+    {
+      "type": "frame",
+      "id": "trSB1",
+      "x": 1600,
+      "y": 3385,
+      "name": "Trash — Sidebar Filter",
+      "theme": {
+        "Mode": "Light"
+      },
+      "clip": true,
+      "width": 260,
+      "height": 400,
+      "fill": "$--sidebar",
+      "layout": "vertical",
+      "gap": 0,
+      "padding": [
+        8,
+        6
+      ],
+      "children": [
+        {
+          "type": "frame",
+          "id": "trFAll",
+          "name": "filterAll",
+          "width": "fill_container",
+          "cornerRadius": 6,
+          "gap": 8,
+          "padding": [
+            6,
+            16
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon_font",
+              "id": "trIAll",
+              "name": "iconAll",
+              "width": 16,
+              "height": 16,
+              "iconFontName": "file-text",
+              "iconFontFamily": "phosphor",
+              "weight": 700,
+              "fill": "$--foreground"
+            },
+            {
+              "type": "text",
+              "id": "trTAll",
+              "name": "txtAll",
+              "fill": "$--foreground",
+              "content": "All Notes",
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "trFFav",
+          "name": "filterFav",
+          "width": "fill_container",
+          "cornerRadius": 6,
+          "gap": 8,
+          "padding": [
+            6,
+            16
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon_font",
+              "id": "trIFav",
+              "name": "iconFav",
+              "width": 16,
+              "height": 16,
+              "iconFontName": "star",
+              "iconFontFamily": "phosphor",
+              "weight": 700,
+              "fill": "$--foreground"
+            },
+            {
+              "type": "text",
+              "id": "trTFav",
+              "name": "txtFav",
+              "fill": "$--foreground",
+              "content": "Favorites",
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": "500"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "trFArc",
+          "name": "filterArchive",
+          "width": "fill_container",
+          "cornerRadius": 6,
+          "gap": 8,
+          "padding": [
+            6,
+            16
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon_font",
+              "id": "trIArc",
+              "name": "iconArchive",
+              "width": 16,
+              "height": 16,
+              "iconFontName": "archive",
+              "iconFontFamily": "phosphor",
+              "weight": 700,
+              "fill": "$--foreground"
+            },
+            {
+              "type": "text",
+              "id": "trTArc",
+              "name": "txtArchive",
+              "fill": "$--foreground",
+              "content": "Archive",
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": "500"
+            },
+            {
+              "type": "frame",
+              "id": "trBArc",
+              "name": "badgeArc",
+              "height": 20,
+              "fill": "$--muted",
+              "cornerRadius": 9999,
+              "padding": [
+                0,
+                6
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "trBTArc",
+                  "fill": "$--muted-foreground",
+                  "content": "2",
+                  "fontFamily": "Inter",
+                  "fontSize": 10,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "trFTr",
+          "name": "filterTrash",
+          "width": "fill_container",
+          "fill": "#ef444418",
+          "cornerRadius": 6,
+          "gap": 8,
+          "padding": [
+            6,
+            16
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon_font",
+              "id": "trITr",
+              "name": "iconTrash",
+              "width": 16,
+              "height": 16,
+              "iconFontName": "trash",
+              "iconFontFamily": "phosphor",
+              "weight": 700,
+              "fill": "$--destructive"
+            },
+            {
+              "type": "text",
+              "id": "trTTr",
+              "name": "txtTrash",
+              "fill": "$--destructive",
+              "content": "Trash",
+              "fontFamily": "Inter",
+              "fontSize": 13,
+              "fontWeight": "600"
+            },
+            {
+              "type": "frame",
+              "id": "trBTr",
+              "name": "badgeTrash",
+              "height": 20,
+              "fill": "$--destructive",
+              "cornerRadius": 9999,
+              "padding": [
+                0,
+                6
+              ],
+              "justifyContent": "center",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "trBTTr",
+                  "fill": "#ffffff",
+                  "content": "3",
+                  "fontFamily": "Inter",
+                  "fontSize": 10,
+                  "fontWeight": "600"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "trNL1",
+      "x": 1600,
+      "y": 3815,
+      "name": "Trash — Note List View",
+      "theme": {
+        "Mode": "Light"
+      },
+      "clip": true,
+      "width": 340,
+      "height": 360,
+      "fill": "$--card",
+      "layout": "vertical",
+      "gap": 0,
+      "children": [
+        {
+          "type": "frame",
+          "id": "trNLH",
+          "name": "header",
+          "width": "fill_container",
+          "height": 45,
+          "padding": [
+            0,
+            16
+          ],
+          "alignItems": "center",
+          "justifyContent": "space_between",
+          "stroke": {
+            "align": "inside",
+            "thickness": {
+              "bottom": 1
+            },
+            "fill": "$--border"
+          },
+          "children": [
+            {
+              "type": "text",
+              "id": "trNLT",
+              "fill": "$--foreground",
+              "content": "Trash",
+              "fontFamily": "Inter",
+              "fontSize": 14,
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "trN1",
+          "name": "trashedNote1",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 2,
+          "padding": [
+            14,
+            16
+          ],
+          "stroke": {
+            "align": "inside",
+            "thickness": {
+              "bottom": 1
+            },
+            "fill": "$--border"
+          },
+          "children": [
+            {
+              "type": "frame",
+              "id": "trN1H",
+              "name": "titleRow",
+              "gap": 6,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "trN1T",
+                  "fill": "$--foreground",
+                  "content": "Old Draft Notes",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "frame",
+                  "id": "trN1B",
+                  "name": "trashedBadge",
+                  "height": 16,
+                  "fill": "#ef444418",
+                  "cornerRadius": 4,
+                  "padding": [
+                    1,
+                    4
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "trN1BT",
+                      "fill": "$--destructive",
+                      "content": "TRASHED",
+                      "fontFamily": "Inter",
+                      "fontSize": 9,
+                      "fontWeight": "500"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "trN1S",
+              "fill": "$--muted-foreground",
+              "content": "Some draft content that is no longer needed...",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": "400"
+            },
+            {
+              "type": "text",
+              "id": "trN1D",
+              "fill": "$--muted-foreground",
+              "content": "5d ago",
+              "fontFamily": "Inter",
+              "fontSize": 10,
+              "fontWeight": "400"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "trN2",
+          "name": "trashedNote2Warning",
+          "width": "fill_container",
+          "layout": "vertical",
+          "gap": 2,
+          "padding": [
+            14,
+            16
+          ],
+          "fill": "#ef44440a",
+          "stroke": {
+            "align": "inside",
+            "thickness": {
+              "bottom": 1
+            },
+            "fill": "$--border"
+          },
+          "children": [
+            {
+              "type": "frame",
+              "id": "trN2H",
+              "name": "titleRow",
+              "gap": 6,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "trN2T",
+                  "fill": "$--foreground",
+                  "content": "Deprecated API Notes",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "frame",
+                  "id": "trN2B",
+                  "name": "warningBadge",
+                  "height": 16,
+                  "fill": "$--destructive",
+                  "cornerRadius": 4,
+                  "padding": [
+                    1,
+                    4
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "trN2BT",
+                      "fill": "#ffffff",
+                      "content": "30+ DAYS",
+                      "fontFamily": "Inter",
+                      "fontSize": 9,
+                      "fontWeight": "600"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "trN2S",
+              "fill": "$--muted-foreground",
+              "content": "Old API documentation that was replaced...",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": "400"
+            },
+            {
+              "type": "text",
+              "id": "trN2D",
+              "fill": "$--destructive",
+              "content": "Trashed 35d ago — will be permanently deleted",
+              "fontFamily": "Inter",
+              "fontSize": 10,
+              "fontWeight": "500"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "trRI1",
+      "x": 1970,
+      "y": 3385,
+      "name": "Trash — Relationship Indicator",
+      "theme": {
+        "Mode": "Light"
+      },
+      "clip": true,
+      "width": 300,
+      "height": 200,
+      "fill": "$--background",
+      "layout": "vertical",
+      "gap": 8,
+      "padding": [
+        16,
+        16
+      ],
+      "children": [
+        {
+          "type": "text",
+          "id": "trRIL",
+          "fill": "$--muted-foreground",
+          "content": "BELONGS TO",
+          "fontFamily": "Inter",
+          "fontSize": 10,
+          "fontWeight": "600",
+          "letterSpacing": 0.5
+        },
+        {
+          "type": "frame",
+          "id": "trRN",
+          "name": "normalRef",
+          "width": "fill_container",
+          "fill": "$--accent-blue-light",
+          "cornerRadius": 6,
+          "padding": [
+            6,
+            10
+          ],
+          "gap": 6,
+          "alignItems": "center",
+          "justifyContent": "space_between",
+          "children": [
+            {
+              "type": "text",
+              "id": "trRNT",
+              "fill": "$--accent-blue",
+              "content": "Build Laputa App",
+              "fontFamily": "Inter",
+              "fontSize": 12,
+              "fontWeight": "500"
+            },
+            {
+              "type": "icon_font",
+              "id": "trRNI",
+              "width": 14,
+              "height": 14,
+              "iconFontName": "wrench",
+              "iconFontFamily": "phosphor",
+              "weight": 700,
+              "fill": "$--accent-blue"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "trRT",
+          "name": "trashedRef",
+          "width": "fill_container",
+          "fill": "$--muted",
+          "cornerRadius": 6,
+          "padding": [
+            6,
+            10
+          ],
+          "gap": 6,
+          "alignItems": "center",
+          "justifyContent": "space_between",
+          "opacity": 0.7,
+          "children": [
+            {
+              "type": "frame",
+              "id": "trRTL",
+              "gap": 4,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "trRTTI",
+                  "width": 12,
+                  "height": 12,
+                  "iconFontName": "trash",
+                  "iconFontFamily": "phosphor",
+                  "weight": 700,
+                  "fill": "$--muted-foreground"
+                },
+                {
+                  "type": "text",
+                  "id": "trRTT",
+                  "fill": "$--muted-foreground",
+                  "content": "Old Draft Notes",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "trRTTX",
+                  "fill": "$--muted-foreground",
+                  "content": "(trashed)",
+                  "fontFamily": "Inter",
+                  "fontSize": 10,
+                  "fontWeight": "400"
+                }
+              ]
+            },
+            {
+              "type": "icon_font",
+              "id": "trRTI",
+              "width": 14,
+              "height": 14,
+              "iconFontName": "file-text",
+              "iconFontFamily": "phosphor",
+              "weight": 700,
+              "fill": "$--muted-foreground"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "trRA",
+          "name": "archivedRef",
+          "width": "fill_container",
+          "fill": "$--muted",
+          "cornerRadius": 6,
+          "padding": [
+            6,
+            10
+          ],
+          "gap": 6,
+          "alignItems": "center",
+          "justifyContent": "space_between",
+          "opacity": 0.7,
+          "children": [
+            {
+              "type": "frame",
+              "id": "trRAL",
+              "gap": 4,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "text",
+                  "id": "trRAT",
+                  "fill": "$--muted-foreground",
+                  "content": "Website Redesign",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "text",
+                  "id": "trRATX",
+                  "fill": "$--muted-foreground",
+                  "content": "(archived)",
+                  "fontFamily": "Inter",
+                  "fontSize": 10,
+                  "fontWeight": "400"
+                }
+              ]
+            },
+            {
+              "type": "icon_font",
+              "id": "trRAI",
+              "width": 14,
+              "height": 14,
+              "iconFontName": "wrench",
+              "iconFontFamily": "phosphor",
+              "weight": 700,
+              "fill": "$--muted-foreground"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "trW30",
+      "x": 1970,
+      "y": 3615,
+      "name": "Trash — 30-Day Auto-Delete Warning",
+      "theme": {
+        "Mode": "Light"
+      },
+      "clip": true,
+      "width": 340,
+      "height": 120,
+      "fill": "$--background",
+      "layout": "vertical",
+      "gap": 8,
+      "padding": [
+        16,
+        16
+      ],
+      "children": [
+        {
+          "type": "text",
+          "id": "trW3L",
+          "fill": "$--muted-foreground",
+          "content": "Warning banner shown at top of trash view:",
+          "fontFamily": "Inter",
+          "fontSize": 11,
+          "fontWeight": "500"
+        },
+        {
+          "type": "frame",
+          "id": "trW3B",
+          "name": "warningBanner",
+          "width": "fill_container",
+          "fill": "#ef44440f",
+          "cornerRadius": 8,
+          "padding": [
+            10,
+            12
+          ],
+          "gap": 8,
+          "alignItems": "center",
+          "stroke": {
+            "align": "inside",
+            "thickness": 1,
+            "fill": "#ef444430"
+          },
+          "children": [
+            {
+              "type": "icon_font",
+              "id": "trW3I",
+              "width": 16,
+              "height": 16,
+              "iconFontName": "warning",
+              "iconFontFamily": "phosphor",
+              "weight": 700,
+              "fill": "$--destructive"
+            },
+            {
+              "type": "frame",
+              "id": "trW3T",
+              "layout": "vertical",
+              "gap": 2,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "trW3T1",
+                  "fill": "$--destructive",
+                  "content": "Notes in trash for 30+ days will be permanently deleted",
+                  "fontFamily": "Inter",
+                  "fontSize": 12,
+                  "fontWeight": "600"
+                },
+                {
+                  "type": "text",
+                  "id": "trW3T2",
+                  "fill": "$--muted-foreground",
+                  "content": "1 note is past the 30-day retention period",
+                  "fontFamily": "Inter",
+                  "fontSize": 11,
+                  "fontWeight": "400"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ],
   "themes": {
