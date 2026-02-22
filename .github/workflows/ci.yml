@@ -16,15 +16,16 @@ jobs:
         with:
           fetch-depth: 0  # Full history for CodeScene
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
+          node-version: '22'
+          cache: 'pnpm'
 
       - name: Setup Rust
         uses: dtolnay/rust-toolchain@stable
@@ -56,18 +57,11 @@ jobs:
             --fail-under-lines 85
         # cargo-llvm-cov exits non-zero if line coverage drops below 85%
 
-      # ── 3. Code Health (CodeScene delta analysis) ─────────────────────────
-      - name: CodeScene Delta Analysis
-        uses: codescene-oss/codescene-delta-analysis-action@v1
-        with:
-          codescene-hostname: https://codescene.io
-          api-token: ${{ secrets.CODESCENE_TOKEN }}
-          project-id: ${{ secrets.CODESCENE_PROJECT_ID }}
-          fail-on-declining-code-health: true
-        # Requires CODESCENE_TOKEN + CODESCENE_PROJECT_ID in GitHub Secrets
-        # See .github/SETUP.md for setup instructions
-        continue-on-error: ${{ secrets.CODESCENE_TOKEN == '' }}
-        # Gracefully skip if secrets not configured yet
+      # ── 3. Code Health (CodeScene) ───────────────────────────────────────
+      # CodeScene PR reviews are handled via webhook integration configured
+      # in the CodeScene dashboard — not via a GitHub Action.
+      # No CI step needed here; CodeScene posts review comments directly on PRs
+      # and can block merges via its own GitHub App status check.
 
       # ── 4. Documentation check (warning only — does not fail build) ───────
       - name: Check docs are updated
