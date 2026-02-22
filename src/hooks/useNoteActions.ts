@@ -29,6 +29,19 @@ function slugify(text: string): string {
   return text.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
 }
 
+/** Generate a unique "Untitled <type>" name by checking existing entries. */
+export function generateUntitledName(entries: VaultEntry[], type: string): string {
+  const baseName = `Untitled ${type.toLowerCase()}`
+  const existingTitles = new Set(entries.map(e => e.title))
+  let title = baseName
+  let counter = 2
+  while (existingTitles.has(title)) {
+    title = `${baseName} ${counter}`
+    counter++
+  }
+  return title
+}
+
 function entryMatchesTarget(e: VaultEntry, targetLower: string, targetAsWords: string): boolean {
   if (e.title.toLowerCase() === targetLower) return true
   if (e.aliases.some((a) => a.toLowerCase() === targetLower)) return true

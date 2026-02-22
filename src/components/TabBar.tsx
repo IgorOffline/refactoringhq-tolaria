@@ -144,7 +144,7 @@ function TabBarActions({ onCreateNote }: { onCreateNote?: () => void }) {
         gap: 12, padding: '0 12px', WebkitAppRegion: 'no-drag',
       } as React.CSSProperties}
     >
-      <button className="flex items-center justify-center border-none bg-transparent p-0 text-muted-foreground cursor-pointer hover:text-foreground transition-colors" onClick={onCreateNote} title="New note">
+      <button className="flex items-center justify-center border-none bg-transparent p-0 text-muted-foreground cursor-pointer hover:text-foreground transition-colors" onClick={() => onCreateNote?.()} title="New note">
         <Plus size={16} />
       </button>
       <button className="flex items-center justify-center border-none bg-transparent p-0 text-muted-foreground" style={DISABLED_ICON_STYLE} title="Coming soon" tabIndex={-1}>

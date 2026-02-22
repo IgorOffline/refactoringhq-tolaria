@@ -1,7 +1,7 @@
 ---
 Is A: Note
 trashed: true
-trashed_at: "2026-01-15"
+trashed_at: 2026-02-21
 Topics: ["[[topic-productivity-systems]]"]
 ---
 # Deprecated Workflow

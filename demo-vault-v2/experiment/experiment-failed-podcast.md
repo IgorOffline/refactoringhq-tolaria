@@ -1,6 +1,6 @@
 ---
 Is A: Experiment
-Status: Dropped
+Status: Open
 trashed: true
 trashed_at: "2026-02-05"
 ---

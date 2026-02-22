@@ -240,7 +240,7 @@ function NoteListInner({ entries, selection, selectedNote, allContent, modifiedF
           <button className="flex items-center text-muted-foreground transition-colors hover:text-foreground" onClick={() => { setSearchVisible(!searchVisible); if (searchVisible) setSearch('') }} title="Search notes">
             <MagnifyingGlass size={16} />
           </button>
-          <button className="flex items-center text-muted-foreground transition-colors hover:text-foreground" onClick={onCreateNote} title="Create new note">
+          <button className="flex items-center text-muted-foreground transition-colors hover:text-foreground" onClick={() => onCreateNote()} title="Create new note">
             <Plus size={16} />
           </button>
         </div>
