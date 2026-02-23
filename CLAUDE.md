@@ -258,14 +258,15 @@ For any AI-touched code:
    cargo llvm-cov --manifest-path src-tauri/Cargo.toml --fail-under-lines 85
    ```
 3. Run `code_health_review` for detailed analysis if the safeguard reports a regression.
-3. If Code Health regresses or fails quality gates:
-   - Highlight the issue.
-   - Refactor before suggesting commit.
-   - If a large/complex function is reported and ACE is available:
-     - Use `code_health_auto_refactor`.
-     - Then refine incrementally.
-   - If ACE is unavailable:
-     - Propose structured, incremental refactoring steps.
+3. If Code Health regresses or fails quality gates — **take it seriously, no shortcuts**:
+   - A CI gate failure means the code has a real structural problem. Fix it properly.
+   - **Never add superficial fixes to pass a gate** (e.g. a JSDoc comment to gain 0.02 points, a trivial test to hit coverage, splitting a function just to reduce line count without improving clarity). This creates "false quality" — the metric looks green but the problem is still there.
+   - Understand *why* the gate is failing:
+     - CodeScene low score → the file has too many responsibilities. Extract hooks, split components, reduce cyclomatic complexity structurally.
+     - Coverage below threshold → write tests that cover real business logic paths, not just "does this render" or framework boilerplate.
+     - Clippy/lint error → fix the actual issue, don't add `#[allow(...)]` unless there's a documented reason.
+   - If a large/complex function is reported: extract sub-functions or hooks with clear single responsibilities. Use `code_health_auto_refactor` if available, then refine.
+   - It's fine to take longer. A proper fix is always better than a fast workaround.
 4. Do **not** mark changes as ready unless risks are explicitly accepted.
 
 ---
